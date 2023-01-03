@@ -8,8 +8,8 @@ const taskInitialState = [
   { id: 3, text: 'Discover Redux', completed: false },
   { id: 4, text: 'Build amazing apps', completed: false },
 ];
-const taskSlice = createSlice({
-  name: 'task',
+const tasksSlice = createSlice({
+  name: 'tasks',
   initialState: taskInitialState,
   reducers: {
     addTask: {
@@ -40,5 +40,5 @@ const taskSlice = createSlice({
   },
 });
 
-export const { addTask, deleteTask, toggleCompleted } = taskSlice.actions;
-export const tasksReducer = taskSlice.reducer;
+export const { addTask, deleteTask, toggleCompleted } = tasksSlice.actions;
+export const tasksReducer = tasksSlice.reducer;
